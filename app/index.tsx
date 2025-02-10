@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, FlatList, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, FlatList, Image, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 import icon from '../assets/images/max-icon.png';
@@ -79,57 +79,61 @@ const SearchMovies = () => {
   );
 };
 
+const { width, height } = Dimensions.get('window');
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
+    padding: width * 0.025,
     backgroundColor: '#fff',
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    columnGap: 14,
-    marginVertical: 20,
+    columnGap: width * 0.035,
+    marginVertical: height * 0.025,
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
+    height: height * 0.05,
+    borderColor: '#f1f3f5',
+    backgroundColor: '#f8f9fa',
     borderWidth: 1,
-    marginBottom: 20,
-    paddingLeft: 8,
-    borderRadius: 5,
+    paddingLeft: width * 0.02,
+    borderRadius: width * 0.02,
+    marginHorizontal: width * 0.02,
+    marginBottom: height * 0.02,
   },
   errorText: {
     color: 'red',
     textAlign: 'center',
-    marginBottom: 10,
+    marginBottom: height * 0.015,
   },
   movieCard: {
     flex: 1,
-    margin: 5,
+    margin: width * 0.012,
     alignItems: 'center',
   },
   poster: {
-    width: 100,
-    height: 150,
-    borderRadius: 5,
+    width: width * 0.3,
+    height: height * 0.22,
+    borderRadius: width * 0.015,
   },
   rating: {
     position: 'absolute',
-    bottom: 44,
-    left: 16,
+    bottom: height * 0.06,
+    left: width * 0.02,
     backgroundColor: 'rgba(0, 0, 0, 0.7)',
     color: '#fff',
-    paddingHorizontal: 5,
-    borderRadius: 3,
-    fontSize: 12,
+    paddingHorizontal: width * 0.015,
+    borderRadius: width * 0.02,
+    fontSize: width * 0.03,
     fontWeight: 'bold',
   },
   movieTitle: {
-    fontSize: 12,
+    fontSize: width * 0.03,
     textAlign: 'center',
-    marginTop: 5,
+    marginTop: height * 0.008,
   },
 });
 

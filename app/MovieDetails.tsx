@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { useNavigation, useRoute } from '@react-navigation/native';
-import { View, Text, Image, ImageBackground, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Image, ImageBackground, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import icon from '../assets/images/splash-icon-light.png';
 import { Ionicons } from '@expo/vector-icons';
@@ -38,6 +38,8 @@ const MovieDetails = () => {
   );
 };
 
+const { width, height } = Dimensions.get('window');
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -54,41 +56,54 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   detailsContainer: {
-    padding: 20,
+    // padding: 20,
+    padding: width * 0.05,
   },
   backButton: {
     position: 'absolute',
-    top: 40,
-    left: 20,
+    // top: 40,
+    top: height * 0.05,
+    // left: 20,
+    left: width * 0.05,
     backgroundColor: 'rgba(0,0,0,0.5)',
-    paddingVertical: 6,
-    paddingHorizontal: 12,
-    borderRadius: 50,
+    // paddingVertical: 6,
+    paddingVertical: height * 0.008,
+    // paddingHorizontal: 12,
+    paddingHorizontal: width * 0.03,
+    // borderRadius: 50,
+    borderRadius: width * 0.1,
     zIndex: 10,
   },
   title: {
-    fontSize: 24,
+    // fontSize: 24,
+    fontSize: width * 0.06,
     fontWeight: 'bold',
     color: '#fff',
   },
   rating: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: width * 0.045,
     color: '#FFD700',
-    marginBottom: 10,
+    // marginBottom: 10,
+    marginBottom: height * 0.015,
     justifyContent: 'center',
   },
   overview: {
-    fontSize: 16,
+    // fontSize: 16,
+    fontSize: width * 0.035,
     color: '#fff',
-    marginBottom: 10,
+    // marginBottom: 10,
+    marginBottom: height * 0.02,
   },
   genresTitle: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: width * 0.045,
     fontWeight: 'bold',
     color: '#fff',
   },
   genres: {
-    fontSize: 16,
+    // fontSize: 16,
+    fontSize: width * 0.04,
     color: '#ddd',
   },
 });
