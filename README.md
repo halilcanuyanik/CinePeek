@@ -1,50 +1,78 @@
-# Welcome to your Expo app 👋
+# CINEPEEK
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CINEPEEK is a mobile application built with React Native and The Movie Database (TMDb) API, allowing users to search for movies and view their details.
 
-## Get started
+## 🚀 Features
+- Enables users to search for movies.
+- Fetches real-time movie data using the TMDb API.
+- Provides detailed information about movies with a user-friendly interface.
+- Displays movie posters and ratings.
+- Allows users to view in-depth details of selected movies.
 
-1. Install dependencies
+## 🛠️ Third-Party Libraries Used
 
-   ```bash
+### 1️ **axios**
+- **Why was it used?**
+  - Facilitates HTTP requests to communicate with the TMDb API.
+  - Provides a promise-based structure for handling asynchronous data fetching.
+  - Helps with error management and efficient response handling.
+
+### 2️ **expo-linear-gradient**
+- **Why was it used?**
+  - Enhances the background of the movie details screen with smooth transition effects.
+  - Improves UX/UI design by increasing readability through transparent overlays.
+
+## 🔧 Installation and Running the Project
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/halilcanuyanik/CinePeek.git
+   cd CinePeek
+   ```
+
+2. **Install dependencies:**
+   ```sh
    npm install
    ```
 
-2. Start the app
-
-   ```bash
-    npx expo start
+3. **Start the project:**
+   ```sh
+   npm start
+   ```
+   or
+   ```sh
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. **Run on a device:**
+   - For Android: `npm run android`
+   - For iOS: `npm run ios`
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+> **Note:** Make sure to add your API key in a `.env` file before running the project.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ⏳ Development Timeline
+The project workflow was distributed as follows:
 
-## Get a fresh project
+1️ **Research & API Integration (2 hours)**
+- Reviewing TMDb API documentation.
+- Implementing API requests using axios.
 
-When you're ready, run:
+2️ **UI Design (3 hours)**
+- Designing the search screen.
+- Creating the movie details screen.
+- Implementing dynamic sizing for responsive design.
 
-```bash
-npm run reset-project
-```
+3️ **State & Error Management (1 hours)**
+- Managing data flow using useState and useEffect.
+- Handling loading states and error messages.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+4️ **Testing & Optimization (1 hours)**
+- Optimizing API calls.
+- Performance testing.
+- Enhancing UI/UX for better user experience.
 
-## Learn more
+## 📌 Notes
+- **API keys are not shared in this project.** Users must add their own TMDb API key.
+- The application was developed using Expo, so an Expo environment is required.
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📜 License
