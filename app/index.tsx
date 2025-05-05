@@ -11,9 +11,9 @@ const SearchMovies = () => {
   const [error, setError] = useState('');
   const navigation = useNavigation();
 
-  const apiKey = 'df4f1e9e72cbea16aff6a624a6fcca13';
+  const apiKey = 'your_api_key';
 
-  const readAccessToken = 'YeyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkZjRmMWU5ZTcyY2JlYTE2YWZmNmE2MjRhNmZjY2ExMyIsIm5iZiI6MTczODg2MTQyMy4yODQ5OTk4LCJzdWIiOiI2N2E0ZWI2ZjQ1MDFiMmYyMzM2NmVkZGYiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.TT73svsLgFi_9PNX0MNOXkWb3jJbFntZEH2ZZdeS_mw';  
+  const readAccessToken = 'your_read_access_token';  
 
   const fetchMovies = async (searchQuery) => {
     if (searchQuery.length < 2) return;
